@@ -15,9 +15,9 @@ nvidia-docker run -it --rm \
  -e DISPLAY=$DISPLAY \
  -v $XSOCK:$XSOCK \
  --privileged \
- --volume=${ROOT_DIR}:/home/eviews/imfx \
+ --volume=${ROOT_DIR}:/home/${USER}/host_folder \
  --net=host \
  -e NVIDIA_DRIVER_CAPABILITIES=all\
- -w /home/eviews/imfx \
+ -w /home/${USER}/host_folder \
  $IMAGE_TAG \
  bash
